@@ -2,7 +2,7 @@
 
 require_once 'Car.php';
 
-class Truck extends Var {
+class Truck extends Car {
     private int $loadCapacity;
     private int $loadingStatus = 0;
 
@@ -30,8 +30,9 @@ class Truck extends Var {
 
     public function setLoadingStatus(int $loadingStatus): void
     {
-        if ($loadingStatus <= $this->loadCapacity) {
-            $this->loadingStatus = $loadingStatus
+        if ($loadingStatus <= $this->loadCapacity) 
+        {
+            $this->loadingStatus = $loadingStatus;
         }
     }
 
